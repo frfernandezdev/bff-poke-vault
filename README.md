@@ -14,7 +14,7 @@
   <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Dockerized 🐳_-blue.svg" alt="docker"/></a>
 </p>
 <p align="center">
-  <a href="https://bff-poke-vault.vercel.app/api/docs" target="_blank"><strong>DEMO PokeVault</strong>></a>
+  <a href="https://inclined-ann-marie-mindstartups-7f8862fc.koyeb.app/api/docs" target="_blank"><strong>DEMO PokeVault</strong>></a>
 </p>
 
 ## Technologies Used
