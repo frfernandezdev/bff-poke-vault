@@ -34,8 +34,8 @@ async function bootstrap() {
 
   app.useGlobalInterceptors(
     new ClassSerializerInterceptor(app.get(Reflector), {
-      //strategy: 'excludeAll',
-      //excludeExtraneousValues: true,
+      strategy: "excludeAll",
+      excludeExtraneousValues: true,
     }),
   );
   app.useGlobalInterceptors(new ResponseInterceptor());
