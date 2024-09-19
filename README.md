@@ -153,4 +153,4 @@ npm run lint:fix
 
 ## Deploy to Production
 
-This project is automatically deployed to production using Vercel. Every time a change is pushed to the main branch, Vercel will build and deploy the latest version of the BFF to production. You can access the deployed application via the Vercel-generated URL.
+This project is automatically deployed to production using Koyeb. Every time a change is pushed to the main branch, Koyeb will build and deploy the latest version of the BFF to production. You can access the deployed application via the [Koyeb-generated URL](https://inclined-ann-marie-mindstartups-7f8862fc.koyeb.app/api/docs).
