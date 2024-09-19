@@ -1,15 +1,10 @@
+<h1 align="center">Poke Vault 🚀✨</h1>
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="images/nestjs.png" alt="Nest Logo" width="512" /></a>
-</p>
-
-<h1 align="center">⭐ NestJS Service Template ⭐</h1>
-
-<p align="center">
-  Template for new services based on NestJS with the Best Practices and Ready for Production
+  This project is a Backend For Frontend (BFF) designed to act as an intermediary between the public PokeApi and the frontend applications consuming the data. The BFF is designed to simplify requests to PokeApi, optimize responses, and provide an additional layer of business logic.
 </p>
 
 <p align="center">
-  <a href="https://github.com/AlbertHernandez/nestjs-service-template/actions/workflows/node.yml?branch=main"><img src="https://github.com/AlbertHernandez/nestjs-service-template/actions/workflows/node.yml/badge.svg?branch=main" alt="nodejs"/></a>
+  <a href="https://github.com/frfernandezdev/bff-poke-vault/actions/workflows/node.yml?branch=main"><img src="https://github.com/frfernandezdev/bff-poke-vault/actions/workflows/node.yml/badge.svg?branch=main" alt="nodejs"/></a>
   <a href="https://nodejs.org/docs/latest-v20.x/api/index.html"><img src="https://img.shields.io/badge/node-20.x-green.svg" alt="node"/></a>
   <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/typescript-5.x-blue.svg" alt="typescript"/></a>
   <a href="https://docs.nestjs.com/v10/"><img src="https://img.shields.io/badge/npm-10.x-red.svg" alt="npm"/></a>
@@ -18,43 +13,26 @@
   <a href="https://vitest.dev/"><img src="https://img.shields.io/badge/Test-Vitest_-yellow.svg" alt="swc"/></a>
   <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Dockerized 🐳_-blue.svg" alt="docker"/></a>
 </p>
+<p align="center">
+  <a href="https://bff-poke-vault.vercel.app/api/docs" target="_blank"><strong>DEMO PokeVault</strong>></a>
+</p>
 
-## 👀 Motivation
+## Technologies Used
+- [Node.js](https://nodejs.org/docs/latest-v20.x/api/index.html): JavaScript runtime environment for backend.
+- [NestJS](https://docs.nestjs.com/v10/): Modular framework for building scalable and maintainable applications.
+- [RxJS](https://rxjs.dev/): Library for reactive programming and handling asynchronous streams.
+- [TypeScript](https://www.typescriptlang.org/): Adds static typing to enhance code safety and maintainability.
 
-When we start creating some new service based on NestJS most often we just use the Nest cli for starting a new service that already give us some convention and structure for our project. This is a good starting point however I was missing a couple of interesting things that almost all services should have to be ready to deploy to production like fully dockerized, ensuring coding conventions...
+## Prerequisites
 
-For this reason I created this custom template for new services based on this framework, with everything I would like to have to start developing a service with the best practices but with a simple file structure so later developers can change to implement their logic.
+Before starting this epic adventure, make sure you have these technological superpowers at hand:
 
-Here we are not providing any specific architecture like hexagonal architecture or others, this is like a simple template where later we can customize and create the architecture we need.
+- [Node.js](https://nodejs.org/en/download/) 🌐: For all your JavaScript runtime needs.
+- [Docker](https://docs.docker.com/get-docker/) 🐳: The container of your dreams.
+- [Git](https://git-scm.com/downloads) 🧑‍💻: To keep everything under control with style.
 
-## 🌟 What is including this template?
 
-1. 🐳 Fully dockerized service ready for development and production environments with the best practices for docker, trying to provide a performance and small image just with the code we really need in your environments.
-2. 👷 Use [SWC](https://swc.rs/) for compiling and running the tests of the service. As commented in the own [NestJS docs](https://docs.nestjs.com/recipes/swc), this is approximately x20 times faster than default typescript compiler that is the one that comes by default in NestJS.
-3. ⚡️ Use [Fastify](https://fastify.dev/) as Web Framework. By default, [NestJS is using Express](https://docs.nestjs.com/techniques/performance) because is the most widely-used framework for working with NodeJS, however, this does not imply is the one is going to give us the most performance. Also, NestJS is fully compatible with Fastify, so we are providing this integration by default. You can check [here](https://github.com/fastify/benchmarks#benchmarks) comparison between different web frameworks.
-4. 🐶 Integration with [husky](https://typicode.github.io/husky/) to ensure we have good quality and conventions while we are developing like:
-   - 💅 Running the linter over the files that have been changed
-   - 💬 Use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) to ensure our commits have a convention.
-   - ✅ Run the tests automatically.
-   - ⚙️ Check our project does not have type errors with Typescript.
-   - 🙊 Check typos to ensure we don't have grammar mistakes.
-5. 🗂️ Separate tests over production code. By default, NestJS is combining in the same folder, the `src`, the unit tests and the code we are developing for production. This is something I personally don't like so here I am separating this and having a dedicated folder for the unit tests.
-6. 🧪 Testing with [Vitest](https://vitest.dev/) and [supertest](https://github.com/ladjs/supertest) for unit and e2e tests.
-7. 🏎️ Performance testing using [k6](https://grafana.com/oss/k6/).
-8. 🤜🤛 Combine unit and e2e test coverage. In the services we may have both type of tests, unit and e2e tests, and usually we would like to see what is the combined test coverage, so we can see the full picture.
-9. 📌 Custom path aliases, where you can define your own paths (you will be able to use imports like `@/shared/logger` instead of `../../../src/shared/logger`).
-10. 🚀 CI/CD using GitHub Actions, helping ensure a good quality of our code and providing useful insights about dependencies, security vulnerabilities and others.
-11. 🐦‍🔥 Usage of ESModules instead of CommonJS, which is the standard in JavaScript.
-
-## 🤩 Other templates
-
-Are you thinking in start new projects in other frameworks or create a super fancy library? If you like this template there are others base on this you can check:
-
-- [Template for new Typescript Libraries](https://github.com/AlbertHernandez/typescript-library-template)
-- [Template for new Typescript Express Services](https://github.com/AlbertHernandez/express-typescript-service-template)
-- [Template for new GitHub Actions based on NodeJS](https://github.com/AlbertHernandez/github-action-nodejs-template)
-
-## 🧑‍💻 Developing
+## Developing
 
 First, we will need to create our .env file, we can create a copy from the example one:
 
@@ -65,7 +43,7 @@ cp .env.example .env
 The project is fully dockerized 🐳, if we want to start the app in **development mode**, we just need to run:
 
 ```bash
-docker-compose up -d my-service-dev
+docker-compose up -d dev
 ```
 
 This development mode will work with **hot-reload** and expose a **debug port**, port `9229`, so later we can connect to it from our editor.
@@ -91,7 +69,7 @@ Now, you should be able to start debugging configuring using your IDE. For examp
 Also, if you want to run the **production mode**, you can run:
 
 ```bash
-docker-compose up -d my-service-production
+docker-compose up -d production
 ```
 
 This service is providing just a health endpoint which you can call to verify the service is working as expected:
@@ -107,13 +85,26 @@ If you want to stop developing, you can stop the service running:
 docker-compose down
 ```
 
-## ⚙️ Building
+## Usage
+
+To visit this [http://localhost](http://localhost:3000)
+
+This BFF exposes the following endpoints:
+
+- GET /pokemons/: Retrieves a list of all Pokémon.
+- GET /pokemons/: Retrieves detailed information about a specific Pokémon by its ID.
+- GET /pokemonAndTypes/: Fetches data about a Pokémon and its types.
+
+Additionally, you can access the API documentation generated by Swagger at http://localhost:3000/api/docs.
+
+
+## Building
 
 ```bash
 npm run build
 ```
 
-## ✅ Testing
+## Testing
 
 The service provide different scripts for running the tests, to run all of them you can run:
 
@@ -146,7 +137,7 @@ brew install k6
 npm run test:performance
 ```
 
-## 💅 Linting
+## Linting
 
 To run the linter you can execute:
 
@@ -159,3 +150,7 @@ And for trying to fix lint issues automatically, you can run:
 ```bash
 npm run lint:fix
 ```
+
+## Deploy to Production
+
+This project is automatically deployed to production using Vercel. Every time a change is pushed to the main branch, Vercel will build and deploy the latest version of the BFF to production. You can access the deployed application via the Vercel-generated URL.
