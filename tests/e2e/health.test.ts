@@ -6,14 +6,14 @@ import { Test, TestingModule } from "@nestjs/testing";
 import * as nock from "nock";
 import request from "supertest";
 
-import { AppModule } from "@/app/app.module";
+import { ApiModule } from "@/src/apps/api/api.module";
 
 describe("Health", () => {
   let app: NestFastifyApplication;
 
   beforeAll(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
-      imports: [AppModule],
+      imports: [ApiModule],
     }).compile();
 
     app = moduleFixture.createNestApplication<NestFastifyApplication>(

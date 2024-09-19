@@ -1,8 +1,6 @@
-version: "3.8"
-
 services:
-  my-service-production:
-    container_name: my-service-production
+  production:
+    container_name: production
     build:
       target: production
       context: .
@@ -19,8 +17,8 @@ services:
           cpus: "0.25"
           memory: "256m"
 
-  my-service-dev:
-    container_name: my-service-dev
+  dev:
+    container_name: dev
     restart: unless-stopped
     env_file: .env
     build:

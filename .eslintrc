@@ -10,7 +10,6 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:prettier/recommended",
     "plugin:unicorn/recommended",
     "plugin:node/recommended"
@@ -28,7 +27,10 @@
       { "ignores": ["modules"] }
     ],
     "node/no-unpublished-import": "off",
-    "no-process-exit": "off"
+    "unicorn/filename-case": "off",
+    "@typescript-eslint/no-process-exit": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "unicorn/no-process-exit": "off"
   },
   "overrides": [
     {
